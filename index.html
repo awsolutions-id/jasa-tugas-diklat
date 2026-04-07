@@ -3,216 +3,420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AW SOLUTIONS</title>
+    <title>AW Solutions - Professional Design & Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght:300;400;600;700&family=Raleway:wght:700;900&display=swap" rel="stylesheet">
+    
     <style>
-        body {
+        :root {
+            --black: #000000;
+            --dark: #111111;
+            --gray: #2c2c2c;
+            --light-gray: #e0e0e0;
+            --orange: #ff8c00;
+            --orange-light: #ffb347;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            background-color: #001222; /* Fallback color */
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--black);
+            color: #fff;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .header-bg {
-            background-image: url('data:image/jpeg;base64,...'); /* Base64 coding of image_3.png, shortened for simplicity. Substitute your own background if available or use CSS gradient to mimic dark navy. Note: Embedding image_3.png is not feasible here. Assuming image_3.png is accessible as a file. */
-            background-image: linear-gradient(rgba(0,18,34,0.7), rgba(0,18,34,0.7)), url('image_3.png'); /* Overlay a dark tint on the image */
+        /* ===================================== */
+        /* STYLE NAVBAR / MENU */
+        /* ===================================== */
+        .navbar {
+            background: transparent;
+            padding: 10px 15px; /* Padding atas dikurangi */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 50px; /* Jarak baris diperkecil agar menu bawah naik */
+            justify-content: center;
+            text-align: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            border-radius: 3px;
+            transition: all 0.3s;
+            letter-spacing: 3px;
+            display: block;
+            width: 100%;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--orange);
+            text-shadow: 0 0 10px rgba(255,140,0,0.5);
+        }
+
+        /* ===================================== */
+        /* STYLE HEADER / BACKGROUND UTAMA */
+        /* ===================================== */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Background laptop.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax effect */
-            padding-top: 100px; /* Space for the floating header */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
+            padding-top: 100px; /* Jarak dari menu */
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0,18,34,0.9);
-            padding: 15px 0;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .logo-small {
-            height: 40px;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .profile-search {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-icon, .profile-icon {
-            height: 25px;
-            margin-left: 15px;
-        }
-
-        .hero-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .hero-content {
             text-align: center;
-            margin-bottom: 50px;
+            z-index: 2;
+            margin-top: 50px; /* Logo & Tulisan diturunkan */
         }
 
-        .business-report-mockup {
-            max-width: 80%;
-            border: 1px solid #444;
-            padding: 20px;
-            background-color: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-
-        .hero-text {
-            color: #d1b464; /* Golden color for title */
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .sub-text {
-            font-size: 1.2rem;
-            margin-top: 0;
-        }
-
-        .services-section {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 50px;
-        }
-
-        .service-card {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid #d1b464; /* Golden border */
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .service-icon {
-            max-height: 80px;
-            margin-bottom: 20px;
-        }
-
-        .service-title {
-            color: #d1b464; /* Golden color */
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .service-description {
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        footer {
-            background-color: rgba(0,18,34,0.9);
-            padding: 20px;
-            text-align: center;
-        }
-
-        .footer-logo {
-            max-height: 40px;
-        }
-
-        .floating-button-right {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #d1b464;
-            width: 50px;
-            height: 50px;
+        .logo-container {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px; /* Jarak bawah dikurangi */
             border-radius: 50%;
+            padding: 4px;
+            background: radial-gradient(circle, rgba(255,140,0,0.4) 0%, rgba(255,140,0,0) 70%);
             display: flex;
-            justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            cursor: pointer;
+            justify-content: center;
         }
 
-        .grid-icon {
-            width: 25px;
-            height: 25px;
+        .hero-content img.logo-main {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 15px rgba(255,140,0,0.6));
         }
 
+        .hero-content h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 3.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: 0 0 30px rgba(255,140,0,0.5);
+            line-height: 1.2;
+            margin-bottom: 5px; /* Jarak ke subtitle diperkecil */
+        }
+
+        .hero-content h1 span {
+            color: var(--orange);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2em;
+            color: #f0f0f0;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+
+        /* ===================================== */
+        /* STYLE KONTEN DINAMIS */
+        /* ===================================== */
+        .content-section {
+            display: none;
+            padding: 140px 15px 30px;
+            background: var(--dark);
+            min-height: 100vh;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===================================== */
+        /* STYLE ISI KONTEN */
+        /* ===================================== */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.4em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .section-title h2 span {
+            color: var(--orange);
+        }
+
+        /* --- STYLE LAYANAN --- */
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-box {
+            background: rgba(255,255,255,0.05);
+            padding: 25px 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        .service-box h3 {
+            color: var(--orange);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .service-box p {
+            color: #f0f0f0;
+            font-size: 1em;
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+
+        /* --- STYLE PORTOFOLIO --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            aspect-ratio: 4/5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1a1a;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--orange);
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* --- STYLE KONTAK --- */
+        .contact-info {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            padding: 35px 25px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #ddd;
+            text-align: center;
+        }
+
+        .wa-button {
+            display: block;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white !important;
+            padding: 15px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px auto;
+            font-size: 1.1em;
+            width: 80%;
+            text-align: center;
+        }
+
+        /* ===================================== */
+        /* RESPONSIVE */
+        /* ===================================== */
+        @media (max-width: 600px) {
+            .hero-content h1 {
+                font-size: 2.5em;
+                letter-spacing: 3px;
+            }
+            .hero-subtitle {
+                font-size: 1em;
+            }
+            .nav-links a {
+                font-size: 1em;
+                padding: 5px 10px;
+            }
+            .logo-container {
+                width: 90px;
+                height: 90px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="header-bg">
-        <header>
-            <img src="path/to/small-logo.png" alt="AW Logo" class="logo-small">
-            <nav>
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#layanan">LAYANAN</a></li>
-                    <li><a href="#portofolio">PORTOFOLIO</a></li>
-                    <li><a href="#kontak">KONTAK</a></li>
-                </ul>
-            </nav>
-            <div class="profile-search">
-                <img src="path/to/search-icon.png" alt="Search" class="search-icon">
-                <img src="path/to/profile-icon.png" alt="Profile" class="profile-icon">
-            </div>
-        </header>
 
-        <section id="home" class="hero-section">
-            <div class="business-report-mockup">
-                <p>Detailed Mockup of Business Report content and graphs from image.</p>
-            </div>
-            <img src="path/to/central-logo.png" alt="AW Solutions Logo" style="height: 100px; margin-bottom: 20px;">
-            <h1 class="hero-text">AW SOLUTIONS</h1>
-            <p class="sub-text">(Jasa Pengetikan, Desain & Cetak)</p>
-        </section>
+    <!-- ===================================== -->
+    <!-- MENU NAVIGASI -->
+    <!-- ===================================== -->
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="#" onclick="showSection('home')" class="active">HOME</a>
+            <a href="#" onclick="showSection('services')">LAYANAN</a>
+            <a href="#" onclick="showSection('portfolio')">PORTOFOLIO</a>
+            <a href="#" onclick="showSection('contact')">KONTAK</a>
+        </div>
+    </div>
 
-        <section id="layanan" class="services-section">
-            <div class="service-card">
-                <img src="path/to/typing-icon.png" alt="Typewriter Icon" class="service-icon">
-                <h3 class="service-title">Pengetikan & Dokumen</h3>
-                <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    <!-- ===================================== -->
+    <!-- HALAMAN UTAMA / HOME -->
+    <!-- ===================================== -->
+    <div class="hero" id="home-section">
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="AW SOLUTIONS Logo.jpg" alt="Logo AW Solutions" class="logo-main">
             </div>
-            <div class="service-card">
-                <img src="path/to/design-icon.png" alt="Design Tools Icon" class="service-icon">
-                <h3 class="service-title">Desain Grafis</h3>
-                <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-            </div>
-            <div class="service-card">
-                <img src="path/to/printing-icon.png" alt="Printing Press Icon" class="service-icon">
-                <h3 class="service-title">Cetak & Publikasi</h3>
-                <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-            </div>
-        </section>
+            <h1>AW <span>SOLUTIONS</span></h1>
+            <p class="hero-subtitle">( Jasa Pengetikan, Desain & Cetak )</p>
+        </div>
+    </div>
 
-        <footer>
-            <img src="path/to/footer-logo.png" alt="AW Logo" class="footer-logo">
-            </footer>
+    <!-- ===================================== -->
+    <!-- BAGIAN LAYANAN -->
+    <!-- ===================================== -->
+    <div id="services-section" class="content-section">
+        <div class="section-title">
+            <h2>LAYANAN <span>KAMI</span></h2>
+        </div>
+        <div class="services-container">
+            <div class="service-box">
+                <h3>PENGETIKAN & DESAIN</h3>
+                <p style="text-align: center; font-size: 1.2em;">🤝 Kami siap membantu!</p>
+            </div>
 
-        <div class="floating-button-right">
-            <img src="path/to/grid-icon.png" alt="Grid Menu" class="grid-icon">
-        </
+            <div class="service-box">
+                <h3>MENERIMA JASA :</h3>
+                <p>✅ PENGETIKAN LAPORAN, MAKALAH, DSB NYA;</p>
+                <p>✅ PRINT OUT (HITAM, PUTIH DAN WARNA)</p>
+                <p>✅ DESAIN DAN CETAK MAJALAH</p>
+                <p>✅ DESAIN DAN CETAK BAHAN-BAHAN PAMERAN (BALIHO, SPANDUK, BANNER, DLL.)</p>
+            </div>
+
+            <div class="service-box">
+                <h3>KEUNGGULAN KAMI</h3>
+                <p>✅ CEPAT SELESAI</p>
+                <p>✅ PEKERJAAN RAPI</p>
+                <p>✅ HARGA BERSAHABAT</p>
+                <p>✅ BERKUALITAS</p>
+                <p>✅ PEMBAYARAN MUDAH</p>
+                <p style="margin-top: 15px; font-style: italic; text-align: center;">🚗 (Siap Antar Hasil)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- BAGIAN PORTOFOLIO -->
+    <!-- ===================================== -->
+    <div id="portfolio-section" class="content-section">
+        <div class="section-title">
+            <h2>PORTO <span>FOLIO</span></h2>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item"><img src="Banner 01.jpg" alt="Banner 01"></div>
+            <div class="gallery-item"><img src="Banner 02.jpg" alt="Banner 02"></div>
+            <div class="gallery-item"><img src="Majalah 01.jpg" alt="Majalah 01"></div>
+            <div class="gallery-item"><img src="Majalah 02.jpg" alt="Majalah 02"></div>
+            <div class="gallery-item"><img src="Majalah 03.jpg" alt="Majalah 03"></div>
+            <div class="gallery-item"><img src="Majalah 04.jpg" alt="Majalah 04"></div>
+            <div class="gallery-item"><img src="Majalah 05.jpg" alt="Majalah 05"></div>
+            <div class="gallery-item"><img src="Spanduk nama stand.jpg" alt="Spanduk nama stand"></div>
+        </div>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- BAGIAN KONTAK -->
+    <!-- ===================================== -->
+    <div id="contact-section" class="content-section">
+        <div class="section-title">
+            <h2>HUBUNGI <span>KAMI</span></h2>
+        </div>
+        <div class="contact-info">
+            <p><strong>📞 HUBUNGI: ALDI</strong></p>
+            <p>📞 0821 8766 2626</p>
+            <p>📞 0822 5329 5313</p>
+            
+            <a href="https://wa.me/6282187662626" class="wa-button">CHAT VIA WHATSAPP 1</a>
+            <a href="https://wa.me/6282253295313" class="wa-button">CHAT VIA WHATSAPP 2</a>
+        </div>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- SCRIPT -->
+    <!-- ===================================== -->
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.content-section').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            if(section !== 'home') {
+                document.getElementById('home-section').style.display = 'none';
+            } else {
+                document.getElementById('home-section').style.display = 'flex';
+            }
+
+            if(section !== 'home') {
+                document.getElementById(section + '-section').classList.add('active');
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if(link.textContent.toLowerCase().includes(section)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
