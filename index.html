@@ -28,11 +28,11 @@
             background-color: var(--black);
             color: #fff;
             overflow-x: hidden;
-            text-align: center; /* Semua jadi rata tengah */
+            text-align: center;
         }
 
         /* ===================================== */
-        /* MENU NAVIGASI - SEKARANG TIDAK TERPOTONG */
+        /* MENU NAVIGASI */
         /* ===================================== */
         .navbar {
             background: transparent;
@@ -49,7 +49,7 @@
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Jarak diperkecil lagi */
+            gap: 15px;
             text-align: center;
             width: 100%;
             flex-wrap: nowrap;
@@ -58,7 +58,7 @@
         .nav-links a {
             color: var(--light-gray) !important;
             text-decoration: none !important;
-            font-size: 0.9em; /* Ukuran font diperkecil lagi */
+            font-size: 0.9em;
             font-family: 'Playfair Display', serif;
             text-transform: uppercase;
             padding: 5px 5px;
@@ -72,7 +72,7 @@
         }
 
         /* ===================================== */
-        /* BAGIAN HOME - SEKARANG PAS DI TENGAH */
+        /* BAGIAN HOME */
         /* ===================================== */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Background laptop.jpg');
@@ -100,6 +100,9 @@
             padding: 0 15px;
         }
 
+        /* ===================================== */
+        /* LOGO BULAT - UKURAN SUDAH DIPERBAIKI */
+        /* ===================================== */
         .logo-circle {
             width: 130px;
             height: 130px;
@@ -118,12 +121,15 @@
             font-weight: 700;
             color: white;
             font-family: 'Playfair Display', serif;
+            line-height: 1;
         }
 
+        /* TULISAN SOLUTIONS DIKECILKAN AGAR TIDAK KENA GARIS */
         .logo-circle .small-text {
-            font-size: 0.8em;
+            font-size: 0.65em; /* Ukuran diperkecil */
             color: #ccc;
             letter-spacing: 2px;
+            margin-top: 3px; /* Jarak diperkecil */
         }
 
         .hero-content h1 {
