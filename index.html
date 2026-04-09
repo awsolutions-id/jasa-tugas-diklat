@@ -207,12 +207,25 @@
         .section-heading-orange {
             text-align: center;
             color: var(--orange);
-            margin-bottom: 25px;
+            margin-bottom: 10px;
             font-size: 1.8em;
             font-weight: 700;
             letter-spacing: 1px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255, 149, 0, 0.3);
+        }
+
+        .sub-heading-gold {
+            text-align: center;
+            color: var(--gold);
+            font-size: 1.5em;
+            margin: 10px 0 25px;
+            font-weight: 600;
+        }
+
+        .divider-line {
+            width: 60%;
+            margin: 0 auto 20px;
+            border: none;
+            border-top: 1px solid rgba(255,149,0,0.3);
         }
 
         .keunggulan {
@@ -269,13 +282,16 @@
             color: #eee;
             font-size: 1em;
             line-height: 1.5;
+            display: flex;
+            align-items: center;
         }
 
-        /* UBAH ICON DARI ✨ MENJADI ✔️ */
-        .service-box ul li::before {
-            content: "✔️ ";
-            color: var(--orange);
-            margin-right: 5px;
+        /* STYLE ICON CENTANG HIJAU */
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            flex-shrink: 0;
         }
 
         .how-to-order ol {
@@ -431,80 +447,79 @@
                 <div class="item">✔️ Privasi Terjaga</div>
             </div>
 
-            <!-- ===================================== -->
-            <!-- ISI SUDAH DIUBAH SESUAI PERMINTAAN -->
-            <!-- ===================================== -->
             <div class="service-box">
                 <h3>🔹 Diklat PKN</h3>
                 <ul>
-                    <li>Essay Agenda I, Agenda II, Agenda III</li>
-                    <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                    <li>Tugas Individu Observasi Lapangan (OL)</li>
-                    <li>Rancangan Proyek Perubahan</li>
-                    <li>Laporan Implementasi Proyek Perubahan</li>
-                    <li>Desain Infografis dan Majalah Proyek Perubahan</li>
-                    <li>Bahan Tayang Seminar Proyek Perubahan</li>
-                    <li>Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
-                    <li>Video Presentasi</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Essay Agenda I, Agenda II, Agenda III</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                    <li><img
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Tugas Individu Observasi Lapangan (OL)</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Rancangan Proyek Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Laporan Implementasi Proyek Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Desain Infografis dan Majalah Proyek Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Bahan Tayang Seminar Proyek Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Video Presentasi</li>
                 </ul>
             </div>
 
             <div class="service-box">
-               
-            <div class="service-box">
                 <h3>🔹 Diklat PKA</h3>
                 <ul>
-                    <li>Essay Agenda I, Agenda II, Agenda III</li>
-                    <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                    <li>Tugas Individu Studi Lapangan (Stula)</li>
-                    <li>Rancangan Aksi Perubahan</li>
-                    <li>Laporan Implementasi Aksi Perubahan</li>
-                    <li>Desain Infografis dan Majalah Aksi Perubahan</li>
-                    <li>Bahan Tayang Seminar Aksi Perubahan</li>
-                    <li>Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
-                    <li>Video Presentasi</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Essay Agenda I, Agenda II, Agenda III</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Tugas Individu Studi Lapangan (Stula)</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Rancangan Aksi Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Laporan Implementasi Aksi Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Desain Infografis dan Majalah Aksi Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Bahan Tayang Seminar Aksi Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Video Presentasi</li>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>🔹 Diklat PKP</h3>
                 <ul>
-                    <li>Essay Agenda I, Agenda II, Agenda III</li>
-                    <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                    <li>Tugas Individu Studi Lapangan (Stula)</li>
-                    <li>Rancangan Aksi Perubahan</li>
-                    <li>Laporan Implementasi Aksi Perubahan</li>
-                    <li>Desain Infografis dan Majalah Aksi Perubahan</li>
-                    <li>Bahan Tayang Seminar Aksi Perubahan</li>
-                    <li>Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
-                    <li>Video Presentasi</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Essay Agenda I, Agenda II, Agenda III</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Tugas Individu Studi Lapangan (Stula)</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Rancangan Aksi Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Laporan Implementasi Aksi Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Desain Infografis dan Majalah Aksi Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Bahan Tayang Seminar Aksi Perubahan</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Video Presentasi</li>
                 </ul>
             </div>
 
             <hr style="margin: 30px auto; border-color: #333; border-width:2px; max-width: 80%;">
 
-            <!-- BAGIAN PENGETIKAN & DESAIN -->
-            <h2 class="section-heading-orange">🔹 PENGETIKAN & DESAIN 🔹</h2>
-            <p style="text-align:center; font-size:1.2em; color:#fff;">🤝 Kami siap membantu!</p>
+            <!-- BAGIAN PAMERAN (SUDAH DIUBAH) -->
+            <h2 class="section-heading-orange">🔹 MELAYANI KEBUTUHAN PAMERAN 🔹</h2>
+            <hr class="divider-line">
+            <h3 class="sub-heading-gold">PROYEK PERUBAHAN & AKSI PERUBAHAN</h3>
+
+            <p style="text-align:center; font-size:1.2em; color:#fff;">🤝 Kami siap membantu mewujudkan kebutuhan administrasi dan desain Anda!</p>
 
             <div class="service-box">
-                <h3>MENERIMA JASA :</h3>
+                <h3>DESAIN & CETAK :</h3>
                 <ul>
-                    <li>PENGETIKAN LAPORAN, MAKALAH, DSB NYA;</li>
-                    <li>PRINT OUT (HITAM, PUTIH DAN WARNA)</li>
-                    <li>DESAIN DAN CETAK MAJALAH</li>
-                    <li>DESAIN DAN CETAK BAHAN-BAHAN PAMERAN (BALIHO, SPANDUK, BANNER, DLL.)</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Majalah</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Baliho / Backdrop</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Spanduk</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> X-Banner</li>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>KEUNGGULAN KAMI</h3>
                 <ul>
-                    <li>CEPAT SELESAI</li>
-                    <li>PEKERJAAN RAPI</li>
-                    <li>HARGA BERSAHABAT</li>
-                    <li>BERKUALITAS</li>
-                    <li>PEMBAYARAN MUDAH</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Cepat Selesai</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Pekerjaan Rapi</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Harga Bersahabat</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Berkualitas</li>
+                    <li><img src="https://i.imgur.com/5QZ7XZL.png" alt="Check" class="check-icon"> Pembayaran Mudah</li>
                 </ul>
                 <p style="text-align:center; margin-top:15px;">🚗 (Siap Antar Hasil)</p>
             </div>
@@ -594,4 +609,4 @@
     </script>
 </body>
 </html>
-    
+                                                                                                               
