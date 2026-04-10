@@ -221,11 +221,12 @@
         }
 
         .feature-list li {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #333;
             color: #eee;
             position: relative;
-            padding-left: 30px;
+            padding-left: 35px;
+            font-size: 1.1em;
         }
 
         .feature-list li:before {
@@ -234,7 +235,67 @@
             font-weight: bold;
             position: absolute;
             left: 0;
-            font-size: 1.2em;
+            font-size: 1.5em;
+        }
+
+        /* ===================================== */
+        /* STYLE BOX LAYANAN DI PORTOFOLIO */
+        /* ===================================== */
+        .service-box {
+            background: rgba(0,0,0,0.2);
+            border: 1px solid #555;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .service-box h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .service-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-box li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #f0f0f0;
+        }
+
+        .service-box li img.check-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+        }
+
+        .divider-line {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 15px 0;
+        }
+
+        .section-heading-orange {
+            text-align: center;
+            color: var(--orange);
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .sub-heading-gold {
+            text-align: center;
+            color: var(--gold);
+            font-size: 1.4em;
+            margin-bottom: 20px;
         }
 
         /* ===================================== */
@@ -419,7 +480,6 @@
             </ul>
         </div>
     </section>
-
     <!-- BAGIAN PORTOFOLIO -->
     <section id="portofolio" class="content-section">
         <div class="section-title">
@@ -442,6 +502,7 @@
             </div>
 
             <p style="text-align:center; font-size:1.2em; color:#fff; margin-top: 20px;">🤝 Kami siap membantu mewujudkan kebutuhan administrasi dan desain Anda!</p>
+
             <div class="gallery">
                 <div class="gallery-item"><img src="Banner 01.jpg" alt="Banner 01"></div>
                 <div class="gallery-item"><img src="Banner 02.jpg" alt="Banner 02"></div>
@@ -534,4 +595,4 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
-                    
+    
