@@ -98,130 +98,125 @@
 
     <main class="container mx-auto">
         
-    <!-- HALAMAN BERANDA - PERSIS SESUAI DESAIN & FILE BARU -->
+     <!-- HALAMAN BERANDA - RAPI, PAS, DAN PERSIS SEPERTI DESAIN -->
 <section id="beranda" class="page-content active">
-    <div class="relative overflow-hidden" style="font-family: 'Arial', 'Helvetica', sans-serif;">
-        <!-- Gambar Latar Belakang (File Baru) -->
+    <div class="relative w-full min-h-screen overflow-hidden" style="font-family: 'Arial', 'Helvetica', sans-serif;">
+        <!-- Gambar Latar Belakang -->
         <div class="absolute inset-0 z-0">
             <img 
                 src="Latar Mengetik 01.jpg" 
                 alt="Background Layanan Jasa Tugas Diklat PKN, PKA, PKP" 
-                class="w-full h-full object-cover object-center"
+                class="w-full h-screen object-cover object-top"
                 loading="lazy"
             >
-            <!-- Lapisan Gradasi Biru (Terang di Atas, Gelap di Bawah) -->
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#082052]/10 to-[#051a44]/95 z-10"></div>
+            <!-- Lapisan Gradasi -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#051a44]/95 z-10"></div>
         </div>
 
-        <div class="relative z-20 p-6 md:p-8 min-h-screen flex flex-col justify-between">
+        <div class="relative z-20 w-full h-screen flex flex-col justify-between p-4 pt-6 pb-8">
             
-            <!-- Menu Navigasi Atas (Warna Emas, Garis Bawah) -->
-            <div class="flex justify-around text-2xl font-bold pt-4 pb-2 text-[#f3d278]">
-                <a href="#" class="menu-link active border-b-2 border-[#f3d278] pb-2 px-2" onclick="changePage('beranda')">Beranda</a>
-                <a href="#" class="menu-link pb-2 px-2" onclick="changePage('profil')">Profil</a>
-                <a href="#" class="menu-link pb-2 px-2" onclick="changePage('portofolio')">Portofolio</a>
+            <!-- Menu Navigasi Atas -->
+            <div class="flex justify-around text-xl md:text-2xl font-bold text-[#c9a861]">
+                <a href="#" class="menu-link active border-b-2 border-[#c9a861] pb-2 px-1" onclick="changePage('beranda')">Beranda</a>
+                <a href="#" class="menu-link pb-2 px-1" onclick="changePage('profil')">Profil</a>
+                <a href="#" class="menu-link pb-2 px-1" onclick="changePage('portofolio')">Portofolio</a>
             </div>
 
-            <!-- Bagian Tengah: Logo & Judul -->
-            <div class="flex flex-col items-center text-center my-auto py-8">
-                <!-- Logo Heksagon Sesuai Gambar -->
-                <div class="w-24 h-24 relative flex items-center justify-center mb-4">
+            <!-- Bagian Konten Tengah -->
+            <div class="flex flex-col items-center text-center mt-4 mb-auto">
+                <!-- Logo -->
+                <div class="w-20 h-20 relative flex items-center justify-center mb-3">
                     <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <path d="M50 2 L98 25 L98 75 L50 98 L2 75 L2 25 Z" fill="#0a2463" stroke="#f3d278" stroke-width="3"></path>
                     </svg>
-                    <span class="absolute text-[#f3d278] text-4xl font-black">AW</span>
+                    <span class="absolute text-[#f3d278] text-3xl font-black">AW</span>
                 </div>
-                <h2 class="text-[#f3d278] text-2xl font-bold mb-2">Solutions</h2>
-                <h1 class="text-[clamp(2.2rem,8vw,3.8rem)] font-black text-[#f3d278] my-4 tracking-wide">
+                <h2 class="text-[#f3d278] text-lg font-bold mb-1">Solutions</h2>
+                <h1 class="text-[clamp(1.8rem,8vw,2.8rem)] font-black text-[#f3d278] my-2 tracking-wide leading-tight">
                     Jasa Tugas Diklat
                 </h1>
 
-                <!-- Daftar Layanan dengan Ikon PERSIS -->
-                <div class="text-left w-full max-w-lg mt-6 space-y-6">
+                <!-- Daftar Layanan -->
+                <div class="text-left w-full max-w-xs mt-4 space-y-4">
                     <!-- PKN -->
-                    <div class="flex items-start gap-4">
-                        <span class="text-[#f3d278] font-bold text-2xl mt-1">•</span>
+                    <div class="flex items-start gap-3">
+                        <span class="text-[#f3d278] font-bold text-xl mt-1">•</span>
                         <div>
-                            <h3 class="text-[#f3d278] font-bold text-2xl">PKN</h3>
-                            <div class="flex items-center gap-4 mt-2">
-                                <!-- Ikon Kubus -->
-                                <svg width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <h3 class="text-[#f3d278] font-bold text-xl">PKN</h3>
+                            <div class="flex items-center gap-3 mt-1">
+                                <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
                                     <path d="M12 12l8 -4.5" />
                                     <path d="M12 12v9" />
                                     <path d="M12 12l-8 -4.5" />
                                 </svg>
-                                <p class="text-white text-xl font-semibold tracking-tight">Pelatihan Kepemimpinan Nasional<br><span class="text-lg font-normal">Tk. II dan Tk. I</span></p>
+                                <p class="text-white text-base font-semibold">Pelatihan Kepemimpinan Nasional<br><span class="text-sm font-normal">Tk. II dan Tk. I</span></p>
                             </div>
                         </div>
                     </div>
 
                     <!-- PKA -->
-                    <div class="flex items-start gap-4">
-                        <span class="text-[#f3d278] font-bold text-2xl mt-1">•</span>
+                    <div class="flex items-start gap-3">
+                        <span class="text-[#f3d278] font-bold text-xl mt-1">•</span>
                         <div>
-                            <h3 class="text-[#f3d278] font-bold text-2xl">PKA</h3>
-                            <div class="flex items-center gap-4 mt-2">
-                                <!-- Ikon Segi Empat Simbol -->
-                                <svg width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <h3 class="text-[#f3d278] font-bold text-xl">PKA</h3>
+                            <div class="flex items-center gap-3 mt-1">
+                                <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M12 2l8 4v12l-8 4l-8-4V6l8-4z" />
                                     <path d="M12 12l8 -4" />
                                     <path d="M9 12h6" />
                                     <path d="M12 16V8" />
                                 </svg>
-                                <p class="text-white text-xl font-semibold tracking-tight">Pelatihan Kepemimpinan Administrator</p>
+                                <p class="text-white text-base font-semibold">Pelatihan Kepemimpinan Administrator</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- PKP -->
-                    <div class="flex items-start gap-4">
-                        <span class="text-[#f3d278] font-bold text-2xl mt-1">•</span>
+                    <div class="flex items-start gap-3">
+                        <span class="text-[#f3d278] font-bold text-xl mt-1">•</span>
                         <div>
-                            <h3 class="text-[#f3d278] font-bold text-2xl">PKP</h3>
-                            <div class="flex items-center gap-4 mt-2">
-                                <!-- Ikon Bunga/Lingkaran -->
-                                <svg width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <h3 class="text-[#f3d278] font-bold text-xl">PKP</h3>
+                            <div class="flex items-center gap-3 mt-1">
+                                <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <circle cx="12" cy="12" r="3" />
                                     <path d="M12 1v4m0 14v-4M4.22 4.22l2.83 2.83m9.9 9.9l2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9l2.83-2.83" />
                                 </svg>
-                                <p class="text-white text-xl font-semibold tracking-tight">Pelatihan Kepemimpinan Pengawas</p>
+                                <p class="text-white text-base font-semibold">Pelatihan Kepemimpinan Pengawas</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Garis Pemisah -->
-            <hr class="border-[#f3d278]/40 w-3/4 mx-auto mb-6">
+            <!-- Bagian Bawah -->
+            <div class="text-center">
+                <hr class="border-[#f3d278]/40 w-3/4 mx-auto mb-4">
+                <h2 class="text-xl md:text-2xl font-bold text-[#f3d278] tracking-wide">Pengetikan, Desain & Cetak</h2>
+                <p class="text-[#f3d278]/80 text-sm font-normal tracking-wide mt-1 mb-6">solusi terpercaya dokumen berkualitas tinggi</p>
 
-            <!-- Bagian Bawah: Keterangan & Tombol -->
-            <div class="text-center mb-8">
-                <h2 class="text-[clamp(1.8rem,5vw,2.2rem)] font-bold text-[#f3d278] tracking-wide">Pengetikan, Desain & Cetak</h2>
-                <p class="text-[#f3d278]/80 text-lg font-normal tracking-wide mt-2 mb-8">solusi terpercaya dokumen berkualitas tinggi</p>
-
-                <!-- Tombol Aksi (Bingkai Putih, Latar Biru) -->
-                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-10">
-                    <a href="#" onclick="changePage('layanan')" class="border-2 border-white text-white py-3 px-10 rounded-full text-xl font-bold tracking-tight bg-[#051a44]/40 hover:bg-[#051a44]/60 transition-all min-w-[200px]">
+                <!-- Tombol -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                    <a href="#" onclick="changePage('layanan')" class="border-2 border-white text-white py-2 px-8 rounded-full text-base font-bold tracking-tight bg-[#051a44]/40 hover:bg-[#051a44]/60 transition-all min-w-[160px]">
                         Layanan Kami
                     </a>
-                    <a href="#" onclick="changePage('kontak')" class="border-2 border-white text-white py-3 px-10 rounded-full text-xl font-bold tracking-tight bg-[#051a44]/40 hover:bg-[#051a44]/60 transition-all min-w-[200px]">
+                    <a href="#" onclick="changePage('kontak')" class="border-2 border-white text-white py-2 px-8 rounded-full text-base font-bold tracking-tight bg-[#051a44]/40 hover:bg-[#051a44]/60 transition-all min-w-[160px]">
                         Hubungi Kami
                     </a>
                 </div>
-            </div>
 
-            <!-- Hak Cipta -->
-            <div class="text-center text-[#f3d278]/90 text-base font-normal tracking-wide pb-6">
-                <p>Copyright © 2026 AW Solutions - Penyedia Jasa<br>Diklat PKN, PKA, PKP. All rights reserved.</p>
+                <!-- Hak Cipta -->
+                <div class="text-center text-[#f3d278]/90 text-xs font-normal tracking-wide">
+                    <p>Copyright © 2026 AW Solutions - Penyedia Jasa<br>Diklat PKN, PKA, PKP. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </div>
-    </section>
-       
+</section>
+            
     <!-- HALAMAN PROFIL -->
         <section id="profil" class="page-content py-6 px-3">
             <div class="max-w-4xl mx-auto bg-white p-4 rounded-lg shadow-md">
