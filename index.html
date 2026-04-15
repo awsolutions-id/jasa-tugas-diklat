@@ -51,7 +51,7 @@
       /* Kotak hak cipta: Lebar penuh tanpa batas */
       .copyright-container {background: rgba(10, 36, 99, 0.6); padding: 12px 0; width: 100%; margin: 1rem 0 0 0;}
       
-      /* Penyesuaian khusus untuk mode mendatar (landscape) - 1 Baris */
+      /* --- PENGATURAN KHUSUS LANDSCAPE (TIDAK BERUBAH SESUAI KEINGINAN KAKAK) --- */
       @media (orientation: landscape) {
           .menu-link {font-size: 14px;}
           .text-[clamp(1.6rem,7vw,2.2rem)] {font-size: clamp(1.4rem, 5vw, 1.8rem) !important;}
@@ -66,10 +66,13 @@
           .px-5 {padding-left: 1rem !important; padding-right: 1rem !important;}
           .copyright-container {padding: 10px 0;}
           .copyright-container p {font-size: 0.7rem !important; white-space: nowrap; text-align: center !important;}
-          .copyright-container br {display: none;} /* Sembunyikan pemisah baris */
+          .copyright-container br {display: none;}
+          /* Pastikan jarak di landscape tetap sama seperti sekarang */
+          .daftar-pendidikan {margin-top: 2rem !important;} 
+          .garis-pemisah {margin-top: 1.5rem !important; margin-bottom: 1rem !important;}
       }
       
-      /* Penyesuaian khusus untuk mode potrait HP - 2 Baris */
+      /* --- PENGATURAN KHUSUS POTRAIT (DISESUAIKAN AGAR LEBIH SEIMBANG) --- */
       @media (orientation: portrait) {
           .w-16 {width: 3.2rem !important; height: 3.2rem !important;}
           .mt-4 {margin-top: 0.75rem !important;}
@@ -80,7 +83,13 @@
           .text-[clamp(1.6rem,7vw,2.2rem)] {font-size: clamp(1.5rem, 6vw, 2rem) !important;}
           .copyright-container {padding: 12px 5px;}
           .copyright-container p {font-size: 0.75rem !important; line-height: 1.4; text-align: center !important;}
-          .copyright-container br {display: inline;} /* Tampilkan pemisah baris */
+          .copyright-container br {display: inline;}
+
+          /* --- PERUBAHAN KHUSUS UNTUK MEMPERBAIKI JARAK DI POTRAIT --- */
+          /* Menambah jarak antara judul dengan daftar PKN/PKA/PKP agar tidak terlalu dekat */
+          .daftar-pendidikan {margin-top: 2.5rem !important;} 
+          /* Mengatur jarak garis agar mendekati teks di atas dan memberi ruang cukup di bawahnya */
+          .garis-pemisah {margin-top: 1rem !important; margin-bottom: 1.25rem !important;}
       }
     </style>
 </head>
@@ -121,7 +130,8 @@
                     Jasa Tugas Diklat
                 </h1>
 
-                <div class="text-left w-full max-w-xs mt-2 flex flex-col gap-3">
+                <!-- DAFTAR PKN - PKA - PKP: CLASS 'daftar-pendidikan' UNTUK PENGATURAN JARAK -->
+                <div class="text-left w-full max-w-xs daftar-pendidikan flex flex-col gap-3">
                     <!-- PKN -->
                     <div class="flex items-start gap-3">
                         <span class="text-gold font-bold text-base mt-1">•</span>
@@ -179,14 +189,14 @@
                 </div>
             </div>
 
-            <!-- Bagian Bawah Beranda (Posisi sudah dinaikkan) -->
+            <!-- Bagian Bawah Beranda: CLASS 'garis-pemisah' UNTUK PENGATURAN KHUSUS -->
             <div class="text-center mb-3 px-3">
-                <!-- Garis pemisah sudah dinaikkan -->
-                <hr class="border-gold/40 w-3/4 mx-auto mt-2 mb-2">
+                <!-- GARIS PEMISAH DENGAN CLASS KHUSUS -->
+                <hr class="border-gold/40 w-3/4 mx-auto garis-pemisah">
                 <h2 class="font-bold text-gold text-lg">Pengetikan, Desain & Cetak</h2>
-                <p class="text-gold/80 text-xs mt-1 mb-2">solusi terpercaya dokumen berkualitas tinggi</p>
+                <p class="text-gold/80 text-xs mt-1 mb-4">solusi terpercaya dokumen berkualitas tinggi</p>
 
-                <div class="flex justify-center gap-3 mb-3 max-w-md mx-auto">
+                <div class="flex justify-center gap-3 mb-5 max-w-md mx-auto">
                     <a href="#" onclick="changePage('layanan', event)" class="btn-custom border-white text-white py-2 px-5 font-bold bg-transparent hover:bg-white/10 text-sm">
                         Layanan Kami
                     </a>
@@ -203,8 +213,8 @@
         </div>
     </div>
 </section>
-                    
-    <!-- Halaman Profil -->
+
+        <!-- Halaman Profil -->
     <section id="profil" class="page-content">
         <div class="relative min-h-screen h-auto">
             <div class="menu-container">
