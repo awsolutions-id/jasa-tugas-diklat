@@ -31,14 +31,14 @@
     <style>
       * {box-sizing: border-box; margin: 0; padding: 0;}
       html, body {width: 100%; height: 100%; font-family: Arial, sans-serif;}
-      /* Mengizinkan pengguliran vertikal di semua kondisi */
       .screen-ratio {width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden;}
       .page-content {display: none; min-height: 100vh; height: auto;}
       .page-content.active {display: block;}
-      /* Menu tetap rapi di semua orientasi */
+      /* Perbaikan menu: ketebalan huruf disamakan */
       .menu-container {background: rgba(10, 36, 99, 0.6); padding: 8px 0; position: sticky; top:0; z-index:99; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 12px;}
-      .menu-link {font-size: 15px; color: #f3d278; text-decoration: none; padding-bottom: 4px;}
-      .menu-link.active {border-bottom: 3px solid #fff; font-weight: bold;}
+      .menu-link {font-size: 15px; color: #f3d278; text-decoration: none; padding-bottom: 4px; font-weight: 600;}
+      /* Garis putih di bawah menu aktif */
+      .menu-link.active {border-bottom: 3px solid #fff; font-weight: 600;}
       .btn-custom {border-radius: 9999px; border: 2px solid; text-align: center; display: block; padding: 12px 8px;}
       
       /* Penyesuaian khusus untuk mode mendatar (landscape) */
@@ -148,17 +148,16 @@
             </div>
                         <!-- Bagian Bawah Beranda -->
             <div class="text-center mb-4 px-3">
-                <hr class="border-gold/40 w-3/4 mx-auto mb-3">
+                <!-- Posisi garis pemisah diturunkan -->
+                <hr class="border-gold/40 w-3/4 mx-auto mb-6 mt-4">
                 <h2 class="font-bold text-gold text-lg">Pengetikan, Desain & Cetak</h2>
                 <p class="text-gold/80 text-xs mt-1 mb-4">solusi terpercaya dokumen berkualitas tinggi</p>
 
                 <div class="flex justify-center gap-3 mb-6 max-w-md mx-auto">
                     <a href="#" onclick="changePage('layanan', event)" class="btn-custom border-white text-white py-2 px-5 font-bold bg-transparent hover:bg-white/10 text-sm">
-                        Layanan Kami
-                    </a>
+                        Layanan Kami</a>
                     <a href="#" onclick="changePage('kontak', event)" class="btn-custom border-white text-white py-2 px-5 font-bold bg-transparent hover:bg-white/10 text-sm">
-                        Hubungi Kami
-                    </a>
+                        Hubungi Kami</a>
                 </div>
                 
                 <p class="text-gold/80 text-xs">Copyright © 2026 AW Solutions - Penyedia Jasa Tugas Diklat PKN, PKA, PKP. All rights reserved.</p>
@@ -181,18 +180,15 @@
             <div class="max-w-4xl mx-auto bg-white p-4 rounded-lg shadow-md m-4">
                 <h2 class="font-black mb-3 text-gray-800 border-b pb-2">Profil Kami</h2>
                 <p class="text-gray-700 leading-relaxed mb-2 font-bold text-sm">
-                    Kami adalah penyedia jasa profesional yang berfokus pada penyusunan dokumen, pengetikan, desain, dan percetakan. Berpengalaman dalam menangani kebutuhan <strong>Jasa Tugas Diklat PKN, PKA, maupun PKP</strong> dengan kualitas terbaik dan ketepatan waktu.
-                </p>
+                    Kami adalah penyedia jasa profesional yang berfokus pada penyusunan dokumen, pengetikan, desain, dan percetakan. Berpengalaman dalam menangani kebutuhan <strong>Jasa Tugas Diklat PKN, PKA, maupun PKP</strong> dengan kualitas terbaik dan ketepatan waktu.</p>
                 <p class="text-gray-700 leading-relaxed mb-2 font-bold text-sm">
-                    Dengan tim yang terampil dan peralatan yang memadai, kami berkomitmen untuk memberikan hasil kerja yang rapi, sesuai aturan, dan memuaskan klien. Kami memahami pentingnya <strong>Jasa Tugas Diklat PKN, PKA, dan PKP</strong> bagi pengembangan karir Anda, sehingga kami selalu berusaha memberikan yang terbaik.
-                </p>
+                    Dengan tim yang terampil dan peralatan yang memadai, kami berkomitmen untuk memberikan hasil kerja yang rapi, sesuai aturan, dan memuaskan klien. Kami memahami pentingnya <strong>Jasa Tugas Diklat PKN, PKA, dan PKP</strong> bagi pengembangan karir Anda, sehingga kami selalu berusaha memberikan yang terbaik.</p>
                 <p class="text-gray-700 leading-relaxed font-bold text-sm">
-                    Berlokasi di Makassar, Sulawesi Selatan, kami siap melayani kebutuhan <strong>Jasa Tugas Diklat PKN, PKA, PKP</strong> Anda baik secara langsung maupun daring.
-                </p>
+                    Berlokasi di Makassar, Sulawesi Selatan, kami siap melayani kebutuhan <strong>Jasa Tugas Diklat PKN, PKA, PKP</strong> Anda baik secara langsung maupun daring.</p>
             </div>
         </div>
     </section>
-    <!-- Halaman Layanan -->
+                <!-- Halaman Layanan -->
     <section id="layanan" class="page-content">
         <div class="relative min-h-screen h-auto">
             <div class="menu-container">
@@ -273,7 +269,7 @@
             </div>
         </div>
     </section>
-                 <!-- Halaman Portofolio -->
+    <!-- Halaman Portofolio -->
     <section id="portofolio" class="page-content">
         <div class="relative min-h-screen h-auto">
             <div class="menu-container">
@@ -322,7 +318,7 @@
             </div>
         </div>
     </section>
-    <!-- Halaman Kontak -->
+               <!-- Halaman Kontak -->
     <section id="kontak" class="page-content">
         <div class="relative min-h-screen h-auto">
             <div class="menu-container">
@@ -384,7 +380,7 @@
             </div>
         </div>
     </section>
-                </div>
+     </div>
     </main>
 
     <!-- Skrip JavaScript untuk Navigasi Halaman -->
@@ -418,3 +414,5 @@
 
 </body>
 </html>
+
+                                                                              
