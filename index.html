@@ -5,32 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Layanan - AW Solutions</title>
     
-    <!-- Tambahan Font -->
+    <!-- Tambahan Font & Ikon -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Pustaka -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    <!-- Konfigurasi -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        biruTua: '#052880',
-                        kuning: '#f8d26a',
-                        abuMuda: '#f0f4fc',
-                    },
-                    fontFamily: {
-                        'sans': ['Roboto', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
       * {box-sizing: border-box; margin: 0; padding: 0;}
@@ -66,6 +45,7 @@
           background-color: #f0f4fc; 
           padding: 40px 20px; 
           text-align: center;
+          width: 100%;
       }
       .header-bg h1 {
           font-size: clamp(2rem,8vw,3.5rem);
@@ -79,6 +59,7 @@
           color: #f8d26a;
           position: relative;
           padding-bottom: 12px;
+          display: inline-block;
       }
       .header-bg p::after {
           content: "";
@@ -91,11 +72,11 @@
           background-color: #f8d26a;
       }
       
-      /* Kartu Layanan */
+      /* Kartu Layanan - Lebar Penuh & Memanjang */
       .service-card {
           border-radius: 12px;
-          padding: 28px 24px;
-          margin: 20px 16px;
+          padding: 24px 20px;
+          margin: 16px;
           position: relative;
           cursor: pointer;
           box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -103,6 +84,7 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+          width: calc(100% - 32px); /* Lebar penuh dikurangi margin */
       }
       .card-blue {
           background-color: #052880;
@@ -114,131 +96,44 @@
           border-color: #052880;
           color: #052880;
       }
+      
+      /* Baris Judul dan Ikon Klik */
+      .header-row {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 12px;
+      }
+      .service-title {
+          font-size: 24px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+      }
       .click-label {
-          position: absolute;
-          bottom: 24px;
-          right: 24px;
           display: flex;
           align-items: center;
           gap: 6px;
           font-size: 14px;
           font-weight: 500;
-      }
-      .card-blue .click-label {
-          color: #f8d26a;
-      }
-      .card-yellow .click-label {
-          color: #052880;
-      }
-      .service-icon {
-          font-size: 32px;
-          margin-bottom: 12px;
-      }
-      .service-title {
-          font-size: 28px;
-          font-weight: 700;
-          margin-bottom: 12px;
-          display: flex;
-          align-items: center;
-          gap: 12px;
-      }
-      .service-subtitle {
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 1.6;
-          margin-bottom: 40px;
+          flex-shrink: 0;
       }
       
-      /* Ikon Khusus */
-      .icon-grid::before {
-          content: "";
-          display: inline-block;
-          width: 28px;
-          height: 28px;
-          background: 
-              linear-gradient(currentColor,currentColor) 0 0,
-              linear-gradient(currentColor,currentColor) 14px 0,
-              linear-gradient(currentColor,currentColor) 0 14px,
-              linear-gradient(currentColor,currentColor) 14px 14px;
-          background-repeat: no-repeat;
-          background-size: 12px 12px;
+      .service-icon {
+          font-size: 28px;
       }
-      .icon-plus::before {
-          content: "";
-          display: inline-block;
-          width: 28px;
-          height: 28px;
-          border: 2px solid currentColor;
-          border-radius: 4px;
-          position: relative;
-      }
-      .icon-plus::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 14px;
-          height: 2px;
-          background-color: currentColor;
-      }
-      .icon-plus::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 2px;
-          height: 14px;
-          background-color: currentColor;
-      }
-      .icon-sun::before {
-          content: "";
-          display: inline-block;
-          width: 28px;
-          height: 28px;
-          background: currentColor;
-          border-radius: 50%;
-          position: relative;
-      }
-      .card-blue .icon-sun::after {
-          background-color: #052880;
-      }
-      .card-yellow .icon-sun::after {
-          background-color: #f8d26a;
-      }
-      .icon-sun::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 16px;
-          height: 16px;
-          border-radius: 50%;
-      }
-      .icon-document::before {
-          content: "";
-          display: inline-block;
-          width: 28px;
-          height: 28px;
-          border: 2px solid currentColor;
-          border-radius: 4px;
-          position: relative;
-      }
-      .icon-document::after {
-          content: "";
-          position: absolute;
-          top: 6px;
-          left: 4px;
-          width: 18px;
-          height: 2px;
-          background-color: currentColor;
-          box-shadow: 0 6px 0 currentColor, 0 12px 0 currentColor;
+      .service-subtitle {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.6;
+          width: 100%;
+          padding-left: 40px; /* Menyelaraskan teks di bawah judul */
       }
       
       /* Gambar Gedung */
-      .building-img {width: 100%; height: auto; display: block;}
+      .building-img {width: 100%; height: auto; display: block; margin-top: 16px;}
       
       /* Footer */
       .footer-container {
@@ -249,6 +144,7 @@
           font-weight: 500; 
           font-size: 16px;
           line-height: 1.6;
+          width: 100%;
       }
       
       /* Pop-up */
@@ -300,48 +196,56 @@
     <div>
         <!-- Kartu PKN -->
         <div class="service-card card-blue" onclick="openModal('pknModal')">
-            <div class="service-icon icon-grid"></div>
-            <h3 class="service-title">
-                PKN
-            </h3>
-            <p class="service-subtitle">(Pelatihan Kepemimpinan Nasional)<br>Tingkat II & Tingkat I</p>
-            <div class="click-label">
-                <i class="fa fa-hand-pointer-o"></i> Klik
+            <div class="header-row">
+                <div class="service-title">
+                    <i class="fa-solid fa-table-cells service-icon"></i>
+                    PKN
+                </div>
+                <div class="click-label">
+                    <i class="fa-solid fa-hand-pointer"></i> Klik
+                </div>
             </div>
+            <p class="service-subtitle">(Pelatihan Kepemimpinan Nasional)<br>Tingkat II & Tingkat I</p>
         </div>
 
         <!-- Kartu PKA -->
         <div class="service-card card-blue" onclick="openModal('pkaModal')">
-            <div class="service-icon icon-plus"></div>
-            <h3 class="service-title">
-                PKA
-            </h3>
-            <p class="service-subtitle">(Pelatihan Kepemimpinan Administrator)</p>
-            <div class="click-label">
-                <i class="fa fa-hand-pointer-o"></i> Klik
+            <div class="header-row">
+                <div class="service-title">
+                    <i class="fa-solid fa-square-plus service-icon"></i>
+                    PKA
+                </div>
+                <div class="click-label">
+                    <i class="fa-solid fa-hand-pointer"></i> Klik
+                </div>
             </div>
+            <p class="service-subtitle">(Pelatihan Kepemimpinan Administrator)</p>
         </div>
 
         <!-- Kartu PKP -->
         <div class="service-card card-blue" onclick="openModal('pkpModal')">
-            <div class="service-icon icon-sun"></div>
-            <h3 class="service-title">
-                PKP
-            </h3>
-            <p class="service-subtitle">(Pelatihan Kepemimpinan Pengawas)</p>
-            <div class="click-label">
-                <i class="fa fa-hand-pointer-o"></i> Klik
+            <div class="header-row">
+                <div class="service-title">
+                    <i class="fa-solid fa-sun service-icon"></i>
+                    PKP
+                </div>
+                <div class="click-label">
+                    <i class="fa-solid fa-hand-pointer"></i> Klik
+                </div>
             </div>
+            <p class="service-subtitle">(Pelatihan Kepemimpinan Pengawas)</p>
         </div>
 
         <!-- Kartu Desain & Cetak -->
         <div class="service-card card-yellow" onclick="openModal('cetakModal')">
-            <div class="service-icon icon-document"></div>
-            <h3 class="service-title">
-                Design / Cetak
-            </h3>
-            <div class="click-label">
-                <i class="fa fa-hand-pointer-o"></i> Klik
+            <div class="header-row">
+                <div class="service-title">
+                    <i class="fa-solid fa-file-lines service-icon"></i>
+                    Design / Cetak
+                </div>
+                <div class="click-label">
+                    <i class="fa-solid fa-hand-pointer"></i> Klik
+                </div>
             </div>
         </div>
     </div>
@@ -397,61 +301,8 @@
                     <span>Video Presentasi</span>
                 </li>
             </ul>
-        </div
-                </div>
-
-    <!-- Pop-up Modal PKA -->
-    <div id="pkaModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('pkaModal')">&times;</span>
-            <h3 class="font-bold text-gray-800 mb-4 text-xl border-b pb-2 border-gray-200">Detail Layanan PKA</h3>
-            <ul class="text-gray-600 space-y-3 text-left">
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Essay Agenda I, Agenda II, Agenda III</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Tugas Individu Agenda I, Agenda II, Agenda III</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Tugas Individu Observasi Lapangan (OL)</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Rancangan Aksi Perubahan</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Laporan Implementasi Aksi Perubahan</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Desain Infografis dan Majalah Aksi Perubahan</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Bahan Tayang Seminar Aksi Perubahan</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Desain Baliho/ Spanduk/ X-Banner Pameran</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Video Presentasi</span>
-                </li>
-            </ul>
         </div>
-    </div>
-
-    <!-- Pop-up Modal PKP -->
-    <div id="pkpModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('pkpModal')">&times;</span>
-            <h3 class="font-bold text-gray-800 mb-4 text-xl border-b pb-2 border-gray-200">Detail Layanan PKP</h3>
-            <ul class="text-gray-600 space-y-3 text-left">
+                    <ul class="text-gray-600 space-y-3 text-left">
                 <li class="flex items-start">
                     <i class="fa fa-check-circle text-green-500 mr-3 mt-1"></i>
                     <span>Essay Agenda I, Agenda II, Agenda III</span>
@@ -546,4 +397,4 @@
 
 </body>
 </html>
-                
+    
