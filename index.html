@@ -7,8 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- STYLE UNTUK POP-UP -->
+    <!-- STYLE -->
     <style>
+        body {
+            margin: 0; 
+            padding: 0; 
+            /* Warna biru sesuai website */
+            background-color: #0a2463; 
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background dengan gambar halus */
+        .background-image {
+            background-image: url('gambar-background.jpg'); /* Ganti dengan nama file foto background Bapak */
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(10, 36, 99, 0.9); /* Warna biru lebih kuat, gambar jadi samar */
+        }
+
         .modal {
             display: none; 
             position: fixed; 
@@ -46,9 +63,36 @@
             color: #bbb;
             text-decoration: none;
         }
+
+        /* Style kotak produk */
+        .item-box {
+            width: 100%; 
+            aspect-ratio: 1/1; 
+            border: 3px solid #f3d278; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            position: relative; 
+            background: white; 
+            cursor: pointer;
+        }
+
+        .label-box {
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            width: 100%; 
+            background: #f3d278; 
+            color: #0a2463; 
+            text-align: center; 
+            padding: 6px 0; 
+            font-weight: bold; 
+            font-size: 14px;
+        }
     </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #0a2463; font-family: Arial, sans-serif;">
+
+<!-- Tambahkan class background-image di sini -->
+<body class="background-image">
 
     <div class="min-h-screen flex flex-col">
         
@@ -61,94 +105,94 @@
         </div>
 
         <!-- ISI KOTAK-KOTAK -->
-        <div class="flex-grow p-4">
+        <!-- Diberi padding kiri kanan biar tidak mentok -->
+        <div class="flex-grow px-6 py-4">
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 850px; margin: 0 auto;">
 
                 <!-- BARIS 1 -->
-                <div onclick="bukaFile('Majalah 01.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Majalah 01.jpg', 'gambar')" class="item-box">
                     <img src="Majalah 01.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
-                <div onclick="bukaFile('Majalah 02.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Majalah 02.jpg', 'gambar')" class="item-box">
                     <img src="Majalah 02.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
-                <div onclick="bukaFile('Majalah 03.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Majalah 03.jpg', 'gambar')" class="item-box">
                     <img src="Majalah 03.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
                 <!-- BARIS 2 -->
-                <div onclick="bukaFile('Majalah 04.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Majalah 04.jpg', 'gambar')" class="item-box">
                     <img src="Majalah 04.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
-                <div onclick="bukaFile('Banner 01.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Banner 01.jpg', 'gambar')" class="item-box">
                     <img src="Banner 01.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
-                <div onclick="bukaFile('Banner 02.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Banner 02.jpg', 'gambar')" class="item-box">
                     <img src="Banner 02.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
                 <!-- BARIS 3 -->
-                <div onclick="bukaFile('Spanduk nama stand.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Spanduk nama stand.jpg', 'gambar')" class="item-box">
                     <img src="Spanduk nama stand.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
-                <div onclick="bukaFile('Cetak Majalah 01.mp4', 'video')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Cetak Majalah 01.mp4', 'video')" class="item-box">
                     <video src="Cetak Majalah 01.mp4" controls style="width: 100%; height: 100%; object-fit: cover;"></video>
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
-                <!-- SUDAH DIPERBAIKI NAMANYA -->
-                <div onclick="bukaFile('Catak Majalah 02.mp4', 'video')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Catak Majalah 02.mp4', 'video')" class="item-box">
                     <video src="Catak Majalah 02.mp4" controls style="width: 100%; height: 100%; object-fit: cover;"></video>
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
                 <!-- BARIS 4 -->
-                <div onclick="bukaFile('Backdrop 01.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Backdrop 01.jpg', 'gambar')" class="item-box">
                     <img src="Backdrop 01.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
-                <div onclick="bukaFile('Backdrop 02.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Backdrop 02.jpg', 'gambar')" class="item-box">
                     <img src="Backdrop 02.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
 
-                <div onclick="bukaFile('Backdrop 03.jpg', 'gambar')" style="width: 100%; aspect-ratio: 1/1; border: 3px solid #f3d278; border-radius: 12px; overflow: hidden; position: relative; background: white; cursor: pointer;">
+                <div onclick="bukaFile('Backdrop 03.jpg', 'gambar')" class="item-box">
                     <img src="Backdrop 03.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: #f3d278; color: #0a2463; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;">
+                    <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
                 </div>
