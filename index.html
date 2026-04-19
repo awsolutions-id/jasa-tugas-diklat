@@ -202,7 +202,7 @@
         }
         /* ICON 3 GARIS DI POJOK KANAN */
         .menu-toggle {
-            color: #FFD700; /* Warna ikon garis jadi kuning sesuai gambar */
+            color: #FFD700; /* Warna ikon garis jadi kuning */
             font-size: 1.8rem;
             cursor: pointer;
             transition: 0.3s;
@@ -210,34 +210,55 @@
         .menu-toggle:hover {
             color: white;
         }
-        /* MENU SAMPING YANG LANGSUNG AKTIF SAAT HALAMAN DIBUKA */
+        /* MENU SAMPING DENGAN UKURAN SESUAI PERMINTAAN */
         .sidebar-menu {
             position: fixed;
-            top: 68px; /* Disesuaikan karena ada garis kuning 3px */
-            right: 0; /* Langsung aktif, posisi di sisi kanan */
-            width: 280px;
-            height: calc(100vh - 68px);
+            top: 68px;
+            right: -220px; /* Awalnya tertutup */
+            width: 220px; /* Lebar menu diperkecil */
+            height: auto; /* Tinggi tidak penuh ke bawah */
+            max-height: 320px; /* Batas tinggi sesuai tanda merah */
             background-color: #002B5B;
             z-index: 998;
             transition: right 0.3s ease;
-            padding-top: 20px;
+            padding: 15px 0;
             box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+            border-bottom-left-radius: 8px;
+            border-top-left-radius: 8px;
         }
+        /* Saat menu aktif terbuka */
+        .sidebar-menu.active {
+            right: 0;
+        }
+        /* TOMBOL TUTUP (X) DI POJOK KANAN ATAS MENU */
+        .close-menu {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: #FFD700;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .close-menu:hover {
+            color: white;
+        }
+        /* STYLE LINK MENU */
         .sidebar-menu a {
             display: block;
-            color: white;
+            color: #FFD700; /* Warna tulisan menu kuning */
             text-decoration: none;
-            padding: 15px 25px;
-            font-size: 1.1rem;
+            padding: 12px 25px;
+            font-size: 1.2rem;
             border-bottom: 1px solid rgba(255,255,255,0.1);
             transition: 0.3s;
         }
         .sidebar-menu a:hover, .sidebar-menu a.active {
             background-color: #1a3b7a;
-            color: #FFD700;
+            color: white;
             padding-left: 35px;
         }
-        /* STYLE TAMBAHAN UNTUK BERANDA */
+        /* STYLE HALAMAN BERANDA */
         .hero-section {
             background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80');
             background-size: cover;
@@ -269,9 +290,9 @@
             text-align: center;
             width: 100%;
             max-width: 600px;
-            margin-top: -30px; /* Dinaikkan lebih tinggi */
+            margin-top: -30px; /* Posisi konten atas dinaikkan */
         }
-        /* TULISAN JASA TUGAS DIKLAT - LEBIH BESAR DAN NAIK LEBIH TINGGI */
+        /* TULISAN UTAMA DINAJKKAN LEBIH TINGGI */
         .judul-utama {
             color: #000000;
             font-size: clamp(2.2rem, 7vw, 3.5rem);
@@ -280,7 +301,7 @@
             text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9), 
                          1px 1px 3px rgba(255, 255, 255, 0.7);
         }
-        /* TULISAN ITEM LAYANAN - WARNA PUTIH, POSISI NAIK LEBIH TINGGI */
+        /* TULISAN LIST LAYANAN DINAJKKAN */
         .item-layanan {
             color: #ffffff;
             font-size: clamp(1.1rem, 3.5vw, 1.5rem);
@@ -304,17 +325,17 @@
             flex-shrink: 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         }
-        /* TULISAN DESKRIPSI - DIPERKECIL UKURANNYA DAN DITURUNKAN POSISINYA */
+        /* TULISAN DESKRIPSI DIPERKECIL DAN DITURUNKAN */
         .deskripsi {
             color: #ffffff;
             font-size: clamp(0.8rem, 2vw, 1rem); /* Ukuran diperkecil */
-            margin: 50px auto 20px auto; /* Margin atas diperbesar agar turun */
+            margin: 50px auto 20px auto; /* Posisi diturunkan */
             line-height: 1.6;
             max-width: 550px;
             text-align: center;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
         }
-        /* TOMBOL MULAI SEKARANG - DITURUNKAN POSISINYA */
+        /* TOMBOL DITURUNKAN */
         .tombol-mulai {
             background-color: white;
             color: #000000;
@@ -328,11 +349,11 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
             margin-top: 8px;
         }
-        /* COPYRIGHT - DITURUNKAN POSISINYA */
+        /* COPYRIGHT DITURUNKAN */
         .copyright {
             color: #ffffff;
             font-size: 0.95rem;
-            margin-top: 35px; /* Margin atas diperbesar agar turun */
+            margin-top: 35px; /* Posisi diturunkan */
             opacity: 0.95;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
@@ -340,9 +361,7 @@
 </head>
 <body class="bg-white font-sans">
 
-    <!-- ============================================== -->
-    <!-- NAVBAR DENGAN LOGO DAN ICON 3 GARIS -->
-    <!-- ============================================== -->
+    <!-- NAVBAR -->
     <div class="navbar">
         <a href="#beranda" onclick="showPage('beranda'); toggleMenu()" class="logo">AW Solutions</a>
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -350,22 +369,17 @@
         </div>
     </div>
 
-    <!-- ============================================== -->
-    <!-- MENU SAMPING YANG LANGSUNG AKTIF -->
-    <!-- ============================================== -->
+    <!-- MENU SAMPING -->
     <div class="sidebar-menu" id="sidebarMenu">
-        <a href="#beranda" onclick="showPage('beranda'); toggleMenu()" class="active">Beranda</a>
-        <a href="#profil" onclick="showPage('profil'); toggleMenu()">Profil</a>
-        <a href="#layanan" onclick="showPage('layanan'); toggleMenu()">Layanan</a>
-        <a href="#portofolio" onclick="showPage('portofolio'); toggleMenu()">Portofolio</a>
-        <a href="#kontak" onclick="showPage('kontak'); toggleMenu()">Kontak</a>
+        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+        
+        <a href="#beranda" onclick="showPage('beranda')" class="active">Beranda</a>
+        <a href="#profil" onclick="showPage('profil')">Profil</a>
+        <a href="#layanan" onclick="showPage('layanan')">Layanan</a>
+        <a href="#portofolio" onclick="showPage('portofolio')">Portofolio</a>
+        <a href="#kontak" onclick="showPage('kontak')">Kontak</a>
     </div>
-
-    <!-- ============================================== -->
-    <!-- HALAMAN BERANDA -->
-    <!-- ============================================== -->
-    <section id="
-beranda" class="page-content active">
+-content active">
         <div class="hero-section">
             <div class="hero-overlay"></div>
             <div class="content-wrapper">
@@ -394,8 +408,9 @@ beranda" class="page-content active">
             </div>
         </div>
     </section>
-    
 
+
+    
 
     
     <!-- ============================================== -->
