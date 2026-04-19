@@ -202,23 +202,23 @@
         }
         /* ICON 3 GARIS DI POJOK KANAN - SUDAH AKTIF */
         .menu-toggle {
-            color: #FFD700; /* Warna ikon garis jadi kuning */
+            color: #FFD700;
             font-size: 1.8rem;
             cursor: pointer;
             transition: 0.3s;
-            pointer-events: auto; /* Agar bisa diklik */
+            pointer-events: auto;
         }
         .menu-toggle:hover {
             color: white;
         }
-        /* MENU SAMPING - DIPERKECIL LAGI LEBARNYA */
+        /* MENU SAMPING - DIPERKECIL LEBARNYA */
         .sidebar-menu {
             position: fixed;
             top: 68px;
-            right: -180px; /* Awalnya tertutup */
-            width: 180px; /* Lebar menu diperkecil lagi */
-            height: auto; /* Tinggi tidak penuh ke bawah */
-            max-height: 320px; /* Batas tinggi sesuai tanda merah */
+            right: -180px;
+            width: 180px;
+            height: auto;
+            max-height: 320px;
             background-color: #002B5B;
             z-index: 998;
             transition: right 0.3s ease;
@@ -231,7 +231,7 @@
         .sidebar-menu.active {
             right: 0;
         }
-        /* TOMBOL TUTUP (X) DI POJOK KANAN ATAS MENU */
+        /* TOMBOL TUTUP MENU */
         .close-menu {
             position: absolute;
             top: 5px;
@@ -244,10 +244,10 @@
         .close-menu:hover {
             color: white;
         }
-        /* STYLE LINK MENU - TULISAN LENGKAP */
+        /* STYLE LINK MENU */
         .sidebar-menu a {
             display: block;
-            color: #FFD700; /* Warna tulisan menu kuning */
+            color: #FFD700;
             text-decoration: none;
             padding: 12px 20px;
             font-size: 1.1rem;
@@ -291,23 +291,23 @@
             text-align: center;
             width: 100%;
             max-width: 600px;
-            margin-top: -30px; /* Posisi konten atas dinaikkan */
+            margin-top: 20px; /* POSISI TULISAN UTAMA DITURUNKAN SEDIKIT */
         }
-        /* TULISAN UTAMA DINAJKKAN LEBIH TINGGI */
+        /* TULISAN UTAMA */
         .judul-utama {
             color: #000000;
             font-size: clamp(2.2rem, 7vw, 3.5rem);
             font-weight: 900;
-            margin-bottom: 30px;
+            margin-bottom: 40px; /* JARAK KE BAWAH DIPERBESAR */
             text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9), 
                          1px 1px 3px rgba(255, 255, 255, 0.7);
         }
-        /* TULISAN LIST LAYANAN - DIPERBESAR LAGI, IKON DIPERKECIL SEDIKIT */
+        /* TULISAN LIST LAYANAN - DIPERBESAR LAGI, IKON DIPERKECIL */
         .item-layanan {
             color: #ffffff;
-            font-size: clamp(1.3rem, 4vw, 1.7rem); /* Ukuran tulisan diperbesar lagi */
+            font-size: clamp(1.5rem, 4.5vw, 1.9rem); /* DIPERBESAR LAGI */
             line-height: 1.8;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -319,18 +319,18 @@
         }
         .item-layanan i {
             color: #FFD700;
-            font-size: 1.5rem; /* Ukuran ikon diperkecil sedikit */
+            font-size: 1.4rem; /* IKON DIPERKECIL SEDIKIT */
             margin-right: 18px;
             width: 35px;
             text-align: center;
             flex-shrink: 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         }
-        /* TULISAN DESKRIPSI - DIPERKECIL DAN DITURUNKAN LEBIH JAUH */
+        /* TULISAN DESKRIPSI - DITURUNKAN LEBIH JAUH */
         .deskripsi {
             color: #ffffff;
-            font-size: clamp(0.8rem, 2vw, 1rem); /* Ukuran diperkecil */
-            margin: 70px auto 20px auto; /* Posisi diturunkan lebih jauh */
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            margin: 90px auto 20px auto; /* DITURUNKAN LEBIH JAUH */
             line-height: 1.6;
             max-width: 550px;
             text-align: center;
@@ -348,13 +348,13 @@
             cursor: pointer;
             white-space: nowrap;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-            margin-top: 15px; /* Posisi diturunkan lebih jauh */
+            margin-top: 20px; /* DITURUNKAN LEBIH JAUH */
         }
         /* COPYRIGHT - DITURUNKAN LEBIH JAUH */
         .copyright {
             color: #ffffff;
             font-size: 0.95rem;
-            margin-top: 45px; /* Posisi diturunkan lebih jauh */
+            margin-top: 55px; /* DITURUNKAN LEBIH JAUH */
             opacity: 0.95;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
@@ -371,13 +371,13 @@
     </div>
 
     <!-- MENU SAMPING -->
-    <div
- class="sidebar-menu" id="sidebarMenu">
+    <div class="sidebar-menu" id="sidebarMenu">
         <span class="close-menu" onclick="toggleMenu()">&times;</span>
         
         <a href="#beranda" onclick="showPage('beranda')" class="active">Beranda</a>
         <a href="#profil" onclick="showPage('profil')">Profil</a>
-        <a href="#layanan" onclick="showPage('layanan')">Layanan</a>
+        <a href="#layanan
+" onclick="showPage('layanan')">Layanan</a>
         <a href="#portofolio" onclick="showPage('portofolio')">Portofolio</a>
         <a href="#kontak" onclick="showPage('kontak')">Kontak</a>
     </div>
@@ -412,8 +412,6 @@
             </div>
         </div>
     </section>
-    
-    
 
     
     <!-- ============================================== -->
