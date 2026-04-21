@@ -77,7 +77,6 @@
                 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
                 position: relative;
             }
-            /* TOMBOL CLOSE POP UP LAIN TETAP SEPERTI SEMULA */
             .close {
                 position: absolute;
                 top: -12px;
@@ -125,13 +124,12 @@
                 font-size: 0.875rem;
                 opacity: 0.8;
             }
-            /* Revisi: Perbaiki tinggi menu agar semua item termasuk Kontak tampil di mode landscape */
             .sidebar-menu {
                 position: fixed;
                 top: 0;
                 right: 0;
                 height: auto;
-                max-height: 90vh; /* Batasi tinggi maksimal agar tidak keluar layar */
+                max-height: 90vh;
                 width: 250px;
                 background-color: #0a2463;
                 z-index: 1001;
@@ -140,7 +138,7 @@
                 padding: 0;
                 margin-top: 60px;
                 border-bottom: 3px solid #f3d278;
-                overflow-y: auto; /* Tambahkan scroll jika konten terlalu panjang */
+                overflow-y: auto;
             }
             .sidebar-menu.active {
                 transform: translateX(0);
@@ -148,7 +146,7 @@
             .sidebar-menu a {
                 display: block;
                 color: white;
-                padding: 12px 20px; /* Kurangi padding agar muat semua menu */
+                padding: 12px 20px;
                 text-decoration: none;
                 font-size: 1rem;
                 border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -176,7 +174,6 @@
             .overlay.active {
                 display: block;
             }
-            /* Tambahan style untuk posisi teks klik di kanan */
             .posisi-kanan {
                 display: flex;
                 justify-content: space-between;
@@ -205,7 +202,6 @@
             --warna-emas: #FFD700;
         }
 
-        /* HEADER DAN MENU BARU */
         .header {
             background-color: var(--warna-biru);
             padding: 12px 20px;
@@ -238,7 +234,6 @@
             color: var(--warna-emas);
         }
 
-        /* HALAMAN BERANDA */
         .hero-section {
             background-image: url('Latar Mengetik 01.jpg');
             background-size: cover;
@@ -326,7 +321,6 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
-        /* HALAMAN PROFIL, LAYANAN, KONTAK TIDAK DIUBAH */
         .page-content {
             display: none;
             padding-top: 65px;
@@ -339,55 +333,53 @@
         }
 
         /* ============================================= */
-        /* STYLE BARU KHUSUS HALAMAN PORTOFOLIO SAJA    */
+        /* STYLE PORTOFOLIO - REVISI                    */
         /* ============================================= */
         .background-image {
-            background-color: #ffffff; /* Background PUTIH */
+            background-color: #ffffff;
         }
 
         .portfolio-container {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 580px; /* Diperkecil agar pas ditengah */
+            margin: 0 auto;   /* Rata tengah */
             padding: 20px;
             box-sizing: border-box;
         }
 
-        /* Judul Portofolio Atas */
         .title-porto {
             text-align: center;
             color: #0d47a1;
             font-size: 36px;
             font-weight: bold;
             margin-top: 0;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
 
-        /* Grid 3 Kolom */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 15px;
-            margin-bottom: 50px; /* Ruang putih di bawah foto diperbesar */
+            margin-bottom: 50px;
+            justify-content: center;
         }
 
-        /* Kotak Portofolio */
         .portfolio-item {
-            border: 2px solid #ffcc00; /* Bingkai KUNING */
+            border: 2px solid #ffcc00;
             border-radius: 4px;
             background-color: #fff;
-            padding: 10px;
+            padding: 8px; /* Ditekan sedikit */
             display: flex;
             flex-direction: column;
             align-items: center;
             box-sizing: border-box;
+            margin: auto;
         }
 
-        /* Area Foto */
         .photo-area {
             width: 100%;
             aspect-ratio: 1 / 1;
             background-color: #ddd;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             border-radius: 2px;
             overflow: hidden;
         }
@@ -399,7 +391,6 @@
             object-fit: cover;
         }
 
-        /* Tombol Lihat Detail */
         .detail-button {
             background-color: #ffcc00;
             color: #000;
@@ -423,19 +414,21 @@
             margin-right: 5px;
         }
 
-        /* FOOTER BIRU */
+        /* FOOTER BIRU FULL */
         .footer-biru {
             background-color: #0d47a1;
-            color: #ffcc00; /* Tulisan KUNING */
+            color: #ffcc00;
             text-align: center;
-            padding: 12px 0; /* Tinggi pendek */
-            width: 100%; /* Lebar FULL kiri-kanan */
+            padding: 12px 0;
+            width: 100%;
             box-sizing: border-box;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         .footer-biru p {
             margin: 0;
-            font-size: 13px; /* Tulisan kecil */
+            font-size: 13px;
         }
 
         /* STYLE POPUP PORTOFOLIO */
@@ -454,7 +447,7 @@
         }
 
         .modal-content-porto {
-            background-color: #ffffff; /* LATAR PUTIH */
+            background-color: #ffffff; /* Putih polos */
             padding: 20px;
             border-radius: 5px;
             position: relative;
@@ -472,29 +465,25 @@
             margin-right: auto;
         }
 
-        /* KETERANGAN FOTO */
+        /* KETERANGAN FOTO - PUTIH BACKGROUND, TULISAN BIRU TUA */
         .detail-text {
-            color: #ffffff; /* Tulisan putih */
+            color: #0a2463; /* Biru Tua */
             text-align: center;
-            margin-top: 20px;
-            font-size: 1.1
-rem;
-font-weight: 600;
-max-width: 80%;
-margin-left: auto;
-margin-right: auto;
-background-color: #0a2463; /* Kotak biru tua */
-padding: 12px 18px;
-border-radius: 8px;
-border: 2px solid #f3d278; /* Garis pinggir kuning */
-box-sizing: border-box;
-word-wrap: break-word;
-line-height: 1.5;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background-color: transparent; /* Tanpa kotak biru */
+            padding: 0;
+            border: none;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* TOMBOL CLOSE BULAT KUNING */
         .close-porto {
-            position: absolute;
+            position: absolute
+;
             top: -15px;
             right: -15px;
             width: 40px;
@@ -747,10 +736,15 @@ line-height: 1.5;
         </div>
     </div>
 
-    <!-- HALAMAN PORTOFOLIO (YANG SUDAH DIGANTI BARU) -->
+    <!-- HALAMAN PORTOFOLIO (REVISI BARU) -->
     <div id="portofolio" class="page-content background-image">
         <div class="portfolio-container">
             <h1 class="title-porto">Hasil Produk</h1>
+            
+            <!-- REDAKSI TULISAN MERAH -->
+            <p style="text-align: center; color: red; font-size: 16px; font-weight: bold; margin-top: -15px; margin-bottom: 25px;">
+                Cetakan pendukung untuk bahan pameran
+            </p>
             
             <div class="portfolio-grid">
 
@@ -861,7 +855,7 @@ line-height: 1.5;
             </div>
         </div>
 
-        <!-- FOOTER BIRU -->
+        <!-- FOOTER BIRU FULL WIDTH -->
         <div class="footer-biru">
             <p>Copyright © 2026 AW Solutions</p>
             <p>Jasa Tugas Diklat PKN, PKA, PKP</p>
@@ -876,9 +870,9 @@ line-height: 1.5;
             <video id="videoPorto" controls style="display: none;" alt="Detail Video">
                 <source id="sumberVideo" src="" type="video/mp4">
             </video>
+            <div id="keteranganPorto" class="detail-text"></div>
         </div>
-        <div id="keteranganPorto" class="detail-text"></div>
-                        </div>
+    </div>
             <!-- HALAMAN KONTAK -->
     <div id="kontak" class="page-content">
         <div class="max-w-2xl mx-auto p-6 bg-white rounded-2xl shadow-sm mt-10 mb-10">
@@ -1002,7 +996,7 @@ line-height: 1.5;
                 videoPorto.style.display = 'block';
             }
             
-            // Tampilkan keterangan dengan kotak biru dan tulisan putih
+            // Tampilkan keterangan
             keteranganElem.textContent = keterangan;
         }
 
