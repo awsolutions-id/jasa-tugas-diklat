@@ -5,354 +5,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AW Solutions - Hubungi Kami</title>
     <style>
-        /* --- RESET & BASIC STYLES --- */
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f6f8f9; /* Background halaman abu-abu sangat muda */
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            align-items: center; /* Meratakan konten ke tengah secara horizontal */
+            background-color: #f0f0f0; /* Atau warna latar belakang yang sesuai */
         }
 
-        /* Container utama untuk membatasi lebar agar terlihat seperti tampilan mobile */
-        .main-container {
-            width: 100%;
-            max-width: 480px; /* Lebar maksimal layaknya handphone */
-            background-color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
+        .container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* --- HEADER & NAVIGATION --- */
-        header {
-            background-color: #001f5b; /* Biru tua pekat */
-            padding: 15px 20px;
+        .header {
+            background-color: #001a4e; /* Warna biru tua */
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+            border-radius: 8px 8px 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #f8c43a; /* Garis kuning bawah */
         }
 
-        .logo-text {
-            color: #f8c43a; /* Teks logo kuning */
-            font-weight: bold;
-            font-size: 1.2rem;
+        .header-title {
             margin: 0;
+            font-size: 1.2em;
         }
 
-        .menu-icon {
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* --- MAIN CONTENT AREA --- */
-        .content {
-            padding: 25px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Judul Utama */
-        h1.page-title {
-            color: #001f5b; /* Biru tua */
-            font-size: 1.6rem;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-
-        /* Garis bawah kuning setelah judul */
-        .title-underline {
-            width: 70px;
-            height: 3px;
-            background-color: #f8c43a;
-            margin-bottom: 25px;
-        }
-
-        /* --- INFO BOX (KOTAK BIRU) --- */
-        .info-box {
-            background-color: #001f5b;
-            color: white;
-            border-radius: 12px;
+        .contact-box {
+            background-color: #001a4e;
+            color: #fff;
             padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 25px;
-            text-align: center;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        .info-box-text {
-            margin-top: 0;
+            border-radius: 0 0 8px 8px;
             margin-bottom: 20px;
-            font-weight: 300;
         }
 
-        /* Item Kontak (WA, Lokasi) */
+        .title {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .sub-title {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+
         .contact-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 12px;
-            text-align: left;
+            margin-bottom: 10px;
         }
 
-        /* Ikon-ikon kecil */
-        .contact-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 12px;
-            flex-shrink: 0;
+        .icon {
+            margin-right: 10px;
+            color: #fff;
         }
 
-        /* Warna spesifik untuk teks "klik chat WhatsApp" */
-        .sub-text-gold {
-            color: #f8c43a; 
-            font-size: 0.8rem;
-            display: block;
-            margin-left: 32px; /* Sejajar dengan teks nomor */
-            margin-top: -3px;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        /* Separator horisontal tipis di dalam kotak biru */
-        .info-separator {
-            border: 0;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin: 20px 0;
-        }
-
-        /* Judul Jam Operasional */
-        .ops-title {
-            color: #f8c43a;
+        .phone-number {
             font-weight: bold;
-            margin-bottom: 15px;
-            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
         }
 
-        .ops-details {
-            font-weight: 300;
-            margin: 0;
-        }
-
-        /* --- FORM BOX (KOTAK PUTIH) --- */
-        .form-box {
-            background-color: white;
-            border-radius: 12px;
-            padding: 25px 20px;
-            width: 100%;
-            box-sizing: border-box;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-        }
-
-        .form-title {
-            color: #001f5b;
+        .whatsapp-link {
             text-align: center;
-            font-weight: bold;
-            font-size: 1.3rem;
-            margin-top: 0;
             margin-bottom: 20px;
         }
 
-        /* Grouping label dan input */
-        .form-group {
-            margin-bottom: 18px;
+        .whatsapp-link a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .form-label {
+        .location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .operational-hours {
+            margin-bottom: 20px;
+        }
+
+        .operational-title {
+            color: #fcc132; /* Warna kuning */
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hours-text {
+            text-align: center;
+            font-size: 0.8em;
+            margin-bottom: 5px;
+        }
+
+        .form-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-title {
+            text-align: center;
+            color: #001a4e;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
             display: block;
-            color: #001f5b;
+            margin-bottom: 5px;
             font-weight: bold;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
+            color: #001a4e;
         }
 
-        /* Styling Input Field & Textarea */
-        .form-input, .form-textarea {
+        input[type="text"],
+        input[type="tel"],
+        textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box; /* Sangat penting agar padding tidak merusak lebar */
-            font-size: 0.9rem;
-            color: #333;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar */
         }
 
-        /* Menghilangkan outline default biru saat fokus */
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            border-color: #f8c43a; /* Ganti dengan border kuning saat aktif */
-        }
-
-        /* placeholder text */
-        .form-input::placeholder, .form-textarea::placeholder {
-            color: #aaa;
-        }
-
-        /* Styling khusus Textarea agar tinggi */
-        .form-textarea {
-            height: 120px;
-            resize: vertical; /* User bisa tarik tinggi tapi tidak lebar */
-        }
-
-        /* --- BUTTON (AKTIF) --- */
         .submit-btn {
-            background-color: #001f5b;
-            color: white;
+            background-color: #001a4e;
+            color: #fff;
             border: none;
-            border-radius: 6px;
-            padding: 15px 20px;
-            width: 100%;
-            font-size: 1rem;
-            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
             cursor: pointer;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px; /* Jarak antara teks dan ikon pesawat */
-            transition: background-color 0.2s; /* Animasi halus saat hover */
         }
 
-        /* Efek hover untuk tombol */
-        .submit-btn:hover {
-            background-color: #00153d; /* Sedikit lebih gelap saat diarahkan mouse */
+        .submit-btn i {
+            margin-left: 5px;
         }
 
-        /* Teks penutup (quote) */
-        .closing-text {
-            color: #888;
+        .thank-you {
+            text-align: center;
             font-style: italic;
-            font-size: 0.8rem;
+            font-size: 0.8em;
+            margin-top: 15px;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #001a4e;
+            color: #fff;
             text-align: center;
-            margin-top: 25px;
-            margin-bottom: 0;
-            line-height: 1.4;
+            padding: 10px;
+            font-size: 0.8em;
+            border-radius: 0 0 8px 8px;
         }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #001f5b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.8rem;
-            line-height: 1.6;
-            margin-top: auto; /* Mendorong footer ke paling bawah jika konten sedikit */
-        }
-
-        /* Ikon-ikon SVG yang disematkan langsung (sehingga tidak perlu file gambar eksternal) */
-        .icon-wa { fill: #25D366; } /* Warna hijau WA */
-        .icon-hand { fill: #f8c43a; } /* Warna kuning */
-        .icon-pin { fill: #f8c43a; } /* Warna kuning */
-        .icon-paperplane { fill: white; }
-
-        /* Media Query: Menyesuaikan tampilan jika diakses dari desktop besar */
-        @media (min-width: 481px) {
-            body {
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
-        }
-
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="main-container">
+    <div class="container">
+        <div class="header">
+            <h1 class="header-title">AW Solutions</h1>
+            <i class="fas fa-bars"></i> </div>
 
-        <header>
-            <div class="logo-text">AW Solutions</div>
-            <div class="menu-icon">&#9776;</div>
-        </header>
+        <div class="contact-box">
+            <h2 class="title">Hubungi Kami</h2>
+            <hr style="border: 2px solid #fcc132; width: 50%; margin: 0 auto 20px auto;">
+            <p class="sub-title">Silakan hubungi kami untuk pemesanan atau pertanyaan lebih lanjut:</p>
 
-        <main class="content">
-
-            <h1 class="page-title">Hubungi Kami</h1>
-            <div class="title-underline"></div>
-
-            <div class="info-box">
-                <p class="info-box-text">Silakan hubungi kami untuk pemesanan atau pertanyaan lebih lanjut:</p>
-                
-                <div class="contact-item">
-                    <svg class="contact-icon icon-wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.222-3.815c1.517.901 3.13 1.377 4.776 1.378 5.485.001 9.95-4.466 9.952-9.953.001-2.659-1.036-5.158-2.92-7.043-1.884-1.884-4.382-2.921-7.04-2.922-5.485 0-9.952 4.467-9.955 9.954-.001 1.611.39 3.184 1.134 4.582l-.841 3.07 3.133-.822zm11.233-12.016c.3-.3.8-.3 1.1 0l2.3 2.3c.3.3.3.8 0 1.1l-1.6 1.6-3.4-3.4 1.6-1.6zm-1.6 1.6l3.4 3.4-6.3 6.3c-.3.3-.8.3-1.1 0l-2.3-2.3c-.3-.3-.3-.8 0-1.1l6.3-6.3zm-10.9 9.8c.2.2.2.5 0 .7l-1.5 1.5-.7-.7 1.5-1.5c.2-.2.5-.2.7 0zm11.9-10.9l-2.1-2.1"/></svg>
-                    <strong>0821 8766 2626</strong>
-                </div>
-                <div class="sub-text-gold">
-                    <svg style="width:12px; height:12px; fill:#f8c43a; vertical-align:middle; margin-right:5px;" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 14v1h-10.016l1.716 2.016-.7.7-2.91-3.424 2.91-3.424.7.7-1.716 2.016h10.016v1z"/></svg>
-                    klik chat WhatsApp
-                </div>
-
-                <div class="contact-item">
-                    <svg class="contact-icon icon-wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.222-3.815c1.517.901 3.13 1.377 4.776 1.378 5.485.001 9.95-4.466 9.952-9.953.001-2.659-1.036-5.158-2.92-7.043-1.884-1.884-4.382-2.921-7.04-2.922-5.485 0-9.952 4.467-9.955 9.954-.001 1.611.39 3.184 1.134 4.582l-.841 3.07 3.133-.822zm11.233-12.016c.3-.3.8-.3 1.1 0l2.3 2.3c.3.3.3.8 0 1.1l-1.6 1.6-3.4-3.4 1.6-1.6zm-1.6 1.6l3.4 3.4-6.3 6.3c-.3.3-.8.3-1.1 0l-2.3-2.3c-.3-.3-.3-.8 0-1.1l6.3-6.3zm-10.9 9.8c.2.2.2.5 0 .7l-1.5 1.5-.7-.7 1.5-1.5c.2-.2.5-.2.7 0zm11.9-10.9l-2.1-2.1"/></svg>
-                    <strong>0859 7515 3455</strong>
-                </div>
-                <div class="sub-text-gold">
-                    <svg style="width:12px; height:12px; fill:#f8c43a; vertical-align:middle; margin-right:5px;" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 14v1h-10.016l1.716 2.016-.7.7-2.91-3.424 2.91-3.424.7.7-1.716 2.016h10.016v1z"/></svg>
-                    klik chat WhatsApp
-                </div>
-
-                <div class="contact-item" style="margin-top: 20px;">
-                    <svg class="contact-icon icon-pin" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.193 3.372 9.023 7.811 15.176.107.149.278.222.463.222s.356-.073.463-.222c4.439-6.153 7.811-10.983 7.811-15.176 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
-                    <span><strong>Makassar, Sulawesi Selatan</strong></span>
-                </div>
-
-                <hr class="info-separator">
-
-                <div class="ops-title">Jam Operasional</div>
-                <p class="ops-details">
-                    Senin - Jumat: 08.00 - 17.00 WITA<br>
-                    Sabtu: 08.00 - 12.00 WITA<br>
-                    Minggu & Hari Libur: Tutup
-                </p>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp icon"></i>
+                <a href="https://wa.me/6282187662626" class="phone-number" target="_blank">0821 8766 2626</a>
+            </div>
+            <div class="whatsapp-link">
+                <a href="https://wa.me/6282187662626" target="_blank">
+                    <i class="far fa-comment-dots" style="margin-right: 5px;"></i> klik chat WhatsApp
+                </a>
             </div>
 
-            <div class="form-box">
-                <h2 class="form-title">Kirim Pesan</h2>
-                
-                <form action="" method="post" id="contactForm">
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="nama_lengkap">Nama Lengkap</label>
-                        <input type="text" id="nama_lengkap" name="nama_lengkap" class="form-input" placeholder="Masukkan nama Anda" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="nomor_wa">Nomor WhatsApp</label>
-                        <input type="tel" id="nomor_wa" name="nomor_wa" class="form-input" placeholder="Masukkan nomor WhatsApp" pattern="[0-9]*" inputmode="numeric" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="pesan">Pesan / Keterangan</label>
-                        <textarea id="pesan" name="pesan" class="form-textarea" placeholder="Tulis pesan atau kebutuhan tugas diklat Anda" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        Kirim Pesan
-                        <svg class="icon-paperplane" style="width:18px; height:18px;" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
-                    </button>
-                </form>
-
-                <p class="closing-text">"Terima kasih telah mengunjungi website kami"</p>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp icon"></i>
+                <a href="https://wa.me/6285975153455" class="phone-number" target="_blank">0859 7515 3455</a>
+            </div>
+            <div class="whatsapp-link">
+                <a href="https://wa.me/6285975153455" target="_blank">
+                    <i class="far fa-comment-dots" style="margin-right: 5px;"></i> klik chat WhatsApp
+                </a>
             </div>
 
-        </main>
+            <div class="location">
+                <i class="fas fa-map-marker-alt icon"></i>
+                Makassar, Sulawesi Selatan
+            </div>
 
-        <footer>
-            Hak Cipta © 2026 AW Solutions<br>
-            Semua Hak Dilindungi
-        </footer>
+            <div class="operational-hours">
+                <p class="operational-title">Jam Operasional</p>
+                <p class="hours-text">Senin - Jumat: 08.00 - 17.00 WITA</p>
+                <p class="hours-text">Sabtu: 08.00 - 12.00 WITA</p>
+                <p class="hours-text">Minggu & Hari Libur: Tutup</p>
+            </div>
+        </div>
 
+        <div class="form-section">
+            <h2 class="form-title">Kirim Pesan</h2>
+
+            <div class="input-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama Anda">
+            </div>
+
+            <div class="input-group">
+                <label for="whatsapp">Nomor WhatsApp</label>
+                <input type="tel" id="whatsapp" placeholder="Masukkan nomor WhatsApp">
+            </div>
+
+            <div class="input-group">
+                <label for="pesan">Pesan / Keterangan</label>
+                <textarea id="pesan" rows="4" placeholder="Tulis pesan atau kebutuhan tugas diklat Anda"></textarea>
+            </div>
+
+            <button class="submit-btn">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+            <p class="thank-you">'Terima kasih telah mengunjungi website kami'</p>
+        </div>
+
+        <div class="footer">
+            <p>Hak Cipta © 2026 AW Solutions</p>
+            <p>Semua Hak Dilindungi</p>
+        </div>
     </div>
 
 </body>
